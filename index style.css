@@ -1,0 +1,85 @@
+/* Root Theme Colors */
+:root {
+    --primary-color: #0d9488;      /* Teal 600 */
+    --primary-dark: #0f766e;       /* Teal 700 */
+    --primary-light: #5eead4;      /* Teal 300 */
+    --secondary-bg: #f0fdfa;       /* Teal 50 */
+    --chat-bot-bg: #e5e7eb;        /* Gray 200 */
+    --chat-user-bg: #0d9488;       /* Teal 600 */
+}
+
+/* Global Page Style */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--secondary-bg);
+    color: #1f2937;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Hide/Show Pages in SPA Navigation */
+.page-content {
+    min-height: calc(100vh - 80px);
+    width: 100%;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Chat Bubbles */
+.message-bubble {
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 18px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.user-bubble {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(13, 148, 136, 0.3);
+}
+
+.bot-bubble {
+    background-color: var(--chat-bot-bg);
+    color: #1f2937;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
+}
+
+/* Navbar Active Link Styling */
+.nav-link.active {
+    border-bottom: 3px solid white;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Optional Hover Glow */
+.nav-link:hover {
+    text-shadow: 0px 0px 5px rgba(255,255,255,0.4);
+}
+
+/* Smooth Page Transitions */
+.page-content {
+    animation: fadeIn 0.35s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Buttons (global slight improvement) */
+button {
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
